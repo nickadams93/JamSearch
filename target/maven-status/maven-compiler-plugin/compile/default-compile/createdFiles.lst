@@ -1,0 +1,13 @@
+com\jamsearch\auth\web\UserController.class
+com\jamsearch\auth\service\SecurityServiceImpl.class
+com\jamsearch\auth\validator\UserValidator.class
+com\jamsearch\auth\WebApplication.class
+com\jamsearch\auth\service\UserServiceImpl.class
+com\jamsearch\auth\service\SecurityService.class
+com\jamsearch\auth\service\UserDetailsServiceImpl.class
+com\jamsearch\auth\repository\UserRepository.class
+com\jamsearch\auth\model\User.class
+com\jamsearch\auth\WebSecurityConfig.class
+com\jamsearch\auth\model\Role.class
+com\jamsearch\auth\repository\RoleRepository.class
+com\jamsearch\auth\service\UserService.class
