@@ -1,6 +1,7 @@
 package com.jamsearch.auth.model;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -16,6 +17,47 @@ public class User {
 
     @Transient
     private String passwordConfirm;
+
+    private String instruments;
+
+    private String address;
+
+    private String emailAddress;
+
+    public String getInstruments() {
+        return instruments;
+    }
+
+    public void setInstruments(String instruments) {
+        this.instruments = instruments;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+
+    public String getZipCode() {
+        return zipCode;
+    }
+
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
+    }
+
+    private String zipCode;
+
 
     @ManyToMany
     private Set<Role> roles;
