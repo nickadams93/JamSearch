@@ -14,8 +14,30 @@ public class User {
     private String username;
 
     private String password;
+    
+    @OneToMany
+    private List<Post> posts;
+    
+    @ManyToMany
+    private List<User> friends;
 
-    @Transient
+    public List<Post> getPosts() {
+		return posts;
+	}
+
+	public void setPosts(List<Post> posts) {
+		this.posts = posts;
+	}
+
+	public List<User> getFriends() {
+		return friends;
+	}
+
+	public void setFriends(List<User> friends) {
+		this.friends = friends;
+	}
+
+	@Transient
     private String passwordConfirm;
 
     private String instruments;
