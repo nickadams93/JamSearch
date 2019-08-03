@@ -6,7 +6,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Create an account</title>
+    <title>Home Page</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
@@ -21,7 +21,7 @@
                     <a class="nav-link" href="/welcome">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="searchpage.jsp">Search Page</a>
+                    <a class="nav-link" href="/searchpage">Search Page</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" onclick="document.forms['logoutForm'].submit()" href="login.jsp">Logout</a>

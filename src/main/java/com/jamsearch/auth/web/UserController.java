@@ -72,9 +72,11 @@ public class UserController {
     }
 
     @GetMapping("/searchpage")
-    public String searchPage(Model model, Principal principal) {
+    public String searchpage(Model model, Principal principal) {
+        model.addAttribute("user", userService.findByUsername(principal.getName()));
+
         List<User> users = userService.findAll();
-        model.addAttribute("users", users);
+        model.addAttribute("users" ,users);
 
         return "searchpage";
     }

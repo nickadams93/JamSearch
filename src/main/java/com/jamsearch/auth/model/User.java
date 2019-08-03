@@ -80,6 +80,15 @@ public class User {
 
     private String zipCode;
 
+    private String city;
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
 
     @ManyToMany
     private Set<Role> roles;

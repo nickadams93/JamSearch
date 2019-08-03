@@ -8,7 +8,7 @@
 <html lang="en">
   <head>
       <meta charset="utf-8">
-      <title>Log in with your account</title>
+      <title>Log in page</title>
 
       <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
       <link href="${contextPath}/resources/css/common.css" rel="stylesheet">
