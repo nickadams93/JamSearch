@@ -123,4 +123,12 @@ public class User {
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
+
+    @Override
+    public boolean equals(Object object) {
+        if (object instanceof User) {
+            return this.username.equals(((User) object).getUsername());
+        }
+        return false;
+    }
 }

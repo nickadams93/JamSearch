@@ -7,19 +7,34 @@
 <head>
     <meta charset="utf-8">
     <title>Create an account</title>
-    <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-  <div class="container">
-    <c:if test="${pageContext.request.userPrincipal.name != null}">
-        <form id="logoutForm" method="POST" action="${contextPath}/logout">
-            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-        </form>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/welcome">${user.username}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>odio
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/welcome">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="searchpage.jsp">Search Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="document.forms['logoutForm'].submit()" href="login.jsp">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <ul class="list-group">
+        <c:forEach items="${user.posts}" var="post">
+            <li class="list-group-item">${post.content}</li>
+        </c:forEach>
 
-        <h2>Welcome ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()">Logout</a></h2>
-    </c:if>
-      <div class="container"><a href="searchpage.jsp">Search Page</a></div>
-  </div>
+    </ul>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="${contextPath}/resources/js/bootstrap.min.js"></script>
 </body>

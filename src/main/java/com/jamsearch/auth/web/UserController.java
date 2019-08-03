@@ -1,6 +1,9 @@
 package com.jamsearch.auth.web;
 
+import com.jamsearch.auth.model.Comment;
+import com.jamsearch.auth.model.Post;
 import com.jamsearch.auth.model.User;
+import com.jamsearch.auth.repository.PostRepository;
 import com.jamsearch.auth.service.SecurityService;
 import com.jamsearch.auth.service.UserService;
 import com.jamsearch.auth.validator.UserValidator;
@@ -9,6 +12,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+
+import java.security.Principal;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class UserController {
@@ -20,6 +27,9 @@ public class UserController {
 
     @Autowired
     private UserValidator userValidator;
+
+    @Autowired
+    private PostRepository postRepository;
 
     @GetMapping("/registration")
     public String registration(Model model) {
@@ -55,7 +65,18 @@ public class UserController {
     }
 
     @GetMapping({"/", "/welcome"})
-    public String welcome(Model model) {
+    public String welcome(Model model, Principal principal) {
+
+        model.addAttribute("user", userService.findByUsername(principal.getName()));
         return "welcome";
     }
+
+    @GetMapping("/searchpage")
+    public String searchPage(Model model, Principal principal) {
+        List<User> users = userService.findAll();
+        model.addAttribute("users", users);
+
+        return "searchpage";
+    }
+
 }
