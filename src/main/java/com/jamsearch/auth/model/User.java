@@ -133,6 +133,36 @@ public class User {
         this.roles = roles;
     }
 
+    private String firstName;
+
+    private String lastName;
+
+    private String adMessage;
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getAdMessage() {
+        return adMessage;
+    }
+
+    public void setAdMessage(String adMessage) {
+        this.adMessage = adMessage;
+    }
+
     @Override
     public boolean equals(Object object) {
         if (object instanceof User) {

@@ -45,10 +45,10 @@
         var omaha = {lat: 41.2565, lng: -95.9345};
         map = new google.maps.Map(
             document.getElementById('map'), {zoom: 10, center: omaha});
-        <c:forEach items="${users}" var="user">
+        <c:forEach items="${users}" var="currentUser">
 
-        codeAddress("${user.address}, ${user.zipCode}")
-        </c:forEach>
+        codeAddress("${currentUser.address}, ${currentUser.zipCode}")
+
 
     }
 
@@ -64,17 +64,23 @@
                 });
                 marker.addListener('click', function() {
                     var infowindow = new google.maps.InfoWindow({
-                        content: "I love the guitar",
-                        maxWidth: 200
+                        content: "<div class=\"card\" style=\"width: 18rem;\">\n" +
+                            "  <div class=\"card-body\">\n" +
+                            "    <h5 class=\"card-title\">${currentUser.username}</h5>\n" +
+                            "    <h6 class=\"card-subtitle mb-2 text-muted\">${currentUser.emailAddress}</h6>\n" +
+                            "    <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n" +
+                            "    <a href=\"#\" class=\"card-link\">Send a Post</a>\n" +
+                            "  </div>\n" +
+                            "</div>",
                     });
-                    infowindow.open(map, marker);
+                        infowindow.open(map, marker);
                 });
             } else {
                 alert('Geocode was not successful for the following reason: ' + status);
             }
         });
+        </c:forEach>
     }
-
 
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCKCqfi6N1AVJdWzmvPERdCzcKvl3uIQE&callback=initMap"

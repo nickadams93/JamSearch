@@ -19,10 +19,23 @@
 
         <form:form method="POST" modelAttribute="userForm" class="form-signin">
             <h2 class="form-signin-heading">Create your account</h2>
+            <spring:bind path="firstName">
+                <div class="form-group ${status.error ? 'has-error' : ''}">
+                    <form:input type="text" path="firstName" class="form-control" placeholder="First Name"
+                                autofocus="true"></form:input>
+                    <form:errors path="firstName"></form:errors>
+                </div>
+            </spring:bind>
+            <spring:bind path="lastName">
+                <div class="form-group ${status.error ? 'has-error' : ''}">
+                    <form:input type="text" path="lastName" class="form-control" placeholder="Last Name"></form:input>
+                    <form:errors path="lastName"></form:errors>
+                </div>
+            </spring:bind>
+
             <spring:bind path="username">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <form:input type="text" path="username" class="form-control" placeholder="Username"
-                                autofocus="true"></form:input>
+                    <form:input type="text" path="username" class="form-control" placeholder="Username"></form:input>
                     <form:errors path="username"></form:errors>
                 </div>
             </spring:bind>
@@ -67,6 +80,14 @@
                     <form:input type="text" path="instruments" class="form-control"
                                 placeholder="Favorite Instrument"></form:input>
                     <form:errors path="instruments"></form:errors>
+                </div>
+            </spring:bind>
+
+            <spring:bind path="adMessage">
+                <div class="form-group ${status.error ? 'has-error' : ''}">
+                    <form:input type="text" path="adMessage" class="form-control"
+                                placeholder="A message for the musicians."></form:input>
+                    <form:errors path="adMessage"></form:errors>
                 </div>
             </spring:bind>
 
