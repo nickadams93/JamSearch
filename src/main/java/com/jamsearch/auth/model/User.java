@@ -14,6 +14,14 @@ public class User {
     private String username;
 
     private String password;
+
+    private String message;
+
+    public String getMessage() {return message;}
+
+    public void setmessage(String message) {
+        this.message = message;
+    }
     
     @OneToMany
     private List<Post> posts;
@@ -137,7 +145,6 @@ public class User {
 
     private String lastName;
 
-    private String adMessage;
 
     public String getFirstName() {
         return firstName;
@@ -153,14 +160,6 @@ public class User {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public String getAdMessage() {
-        return adMessage;
-    }
-
-    public void setAdMessage(String adMessage) {
-        this.adMessage = adMessage;
     }
 
     @Override

@@ -29,6 +29,19 @@
             </ul>
         </div>
     </nav>
+    <c:if test="${empty user.message}">
+        <div class="jumbotron">
+            <h1>Hello, ${user.firstName} ${user.lastName}!</h1>
+            <p>In order to put your message out there to other musicians
+            looking to jam, write a short message below.  Think about
+            including preferred times, types of music, or other pertinent details.
+            After you have set your message, other musicians can see your details and post on your board
+            or send you an email looking to hook up and make the music happen.  After you have
+            set your message feel free to head to search page and look for other musicians in your area
+            who are looking to jam.</p>
+            <p><a class="btn btn-primary btn-lg" href="/messageCreation" role="button">Set message!</a></p>
+        </div>
+    </c:if>
     <ul class="list-group">
         <c:forEach items="${user.posts}" var="post">
             <li class="list-group-item">${post.content}</li>

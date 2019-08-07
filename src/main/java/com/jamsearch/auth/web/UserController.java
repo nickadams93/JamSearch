@@ -71,6 +71,12 @@ public class UserController {
         return "welcome";
     }
 
+    @PostMapping("/welcome")
+    public String welcomeMessage(@ModelAttribute("userForm") User userForm, BindingResult bindingResult)  {
+
+        return "/welcome";
+    }
+
     @GetMapping("/searchpage")
     public String searchpage(Model model, Principal principal) {
         model.addAttribute("user", userService.findByUsername(principal.getName()));
@@ -79,6 +85,23 @@ public class UserController {
         model.addAttribute("users" ,users);
 
         return "searchpage";
+    }
+
+    @GetMapping("/messageCreation")
+    public String messageCreation(Model model) {
+        User userForm = new User();
+        model.addAttribute("userForm", userForm);
+
+        return "messageCreation";
+    }
+
+    @PutMapping("/messageCreation")
+    public String messageCreation(Model model, Principal principal, @ModelAttribute("userForm") User userForm, BindingResult bindingResult) {
+        User user = userService.findByUsername(principal.getName());
+        user.setmessage(userForm.getMessage());
+        userService.save(user);
+
+        return "redirect:/welcome";
     }
 
 }

@@ -68,7 +68,7 @@
                             "  <div class=\"card-body\">\n" +
                             "    <h5 class=\"card-title\">${currentUser.username}</h5>\n" +
                             "    <h6 class=\"card-subtitle mb-2 text-muted\">${currentUser.emailAddress}</h6>\n" +
-                            "    <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n" +
+                            "    <p class=\"card-text\">${currentUser.message}</p>\n" +
                             "    <a href=\"#\" class=\"card-link\">Send a Post</a>\n" +
                             "  </div>\n" +
                             "</div>",

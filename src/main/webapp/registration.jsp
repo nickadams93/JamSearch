@@ -71,7 +71,7 @@
             <spring:bind path="zipCode">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
                     <form:input type="text" path="zipCode" class="form-control"
-                                placeholder="Please enter your address"></form:input>
+                                placeholder="Please enter your zipcode"></form:input>
                     <form:errors path="zipCode"></form:errors>
                 </div>
             </spring:bind>
@@ -80,14 +80,6 @@
                     <form:input type="text" path="instruments" class="form-control"
                                 placeholder="Favorite Instrument"></form:input>
                     <form:errors path="instruments"></form:errors>
-                </div>
-            </spring:bind>
-
-            <spring:bind path="adMessage">
-                <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <form:input type="text" path="adMessage" class="form-control"
-                                placeholder="A message for the musicians."></form:input>
-                    <form:errors path="adMessage"></form:errors>
                 </div>
             </spring:bind>
 
