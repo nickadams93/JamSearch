@@ -1,24 +1,25 @@
 package com.jamsearch.auth.web;
 
-import com.jamsearch.auth.model.Comment;
-import com.jamsearch.auth.model.Post;
 import com.jamsearch.auth.model.User;
 import com.jamsearch.auth.repository.PostRepository;
+import com.jamsearch.auth.repository.UserRepository;
 import com.jamsearch.auth.service.SecurityService;
 import com.jamsearch.auth.service.UserService;
 import com.jamsearch.auth.validator.UserValidator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
 public class UserController {
+
     @Autowired
     private UserService userService;
 
@@ -30,6 +31,9 @@ public class UserController {
 
     @Autowired
     private PostRepository postRepository;
+
+    @Autowired
+    private UserRepository userRepository;
 
     @GetMapping("/registration")
     public String registration(Model model) {
@@ -77,12 +81,17 @@ public class UserController {
         return "/welcome";
     }
 
+    @GetMapping("/users")
+    public ResponseEntity<List<User>> users() {
+        return new ResponseEntity<>(userService.findAll(), HttpStatus.OK);
+    }
+
     @GetMapping("/searchpage")
     public String searchpage(Model model, Principal principal) {
         model.addAttribute("user", userService.findByUsername(principal.getName()));
 
         List<User> users = userService.findAll();
-        model.addAttribute("users" ,users);
+        model.addAttribute("users", users);
 
         return "searchpage";
     }
@@ -96,10 +105,13 @@ public class UserController {
     }
 
     @PutMapping("/messageCreation")
-    public String messageCreation(Model model, Principal principal, @ModelAttribute("userForm") User userForm, BindingResult bindingResult) {
+    public String messageCreation(@ModelAttribute("userForm") User userForm, Model model, Principal principal) {
         User user = userService.findByUsername(principal.getName());
-        user.setmessage(userForm.getMessage());
+        model.addAttribute("testBefore", userForm);
+        model.addAttribute("testBeforeSave", user);
+        user.setMessage(userForm.getMessage());
         userService.save(user);
+        model.addAttribute("testAfterSave", user);
 
         return "redirect:/welcome";
     }

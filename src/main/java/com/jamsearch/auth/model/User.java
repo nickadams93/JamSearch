@@ -1,11 +1,14 @@
 package com.jamsearch.auth.model;
 
+import org.hibernate.annotations.DynamicUpdate;
+
 import javax.persistence.*;
 import java.util.List;
 import java.util.Set;
 
 @Entity
 @Table(name = "user")
+@DynamicUpdate(value = true)
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,7 +22,7 @@ public class User {
 
     public String getMessage() {return message;}
 
-    public void setmessage(String message) {
+    public void setMessage(String message) {
         this.message = message;
     }
     

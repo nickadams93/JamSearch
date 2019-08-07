@@ -46,7 +46,6 @@
         <c:forEach items="${user.posts}" var="post">
             <li class="list-group-item">${post.content}</li>
         </c:forEach>
-
     </ul>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="${contextPath}/resources/js/bootstrap.min.js"></script>

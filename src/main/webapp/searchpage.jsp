@@ -46,14 +46,15 @@
         map = new google.maps.Map(
             document.getElementById('map'), {zoom: 10, center: omaha});
         <c:forEach items="${users}" var="currentUser">
-
-        codeAddress("${currentUser.address}, ${currentUser.zipCode}")
-
+        var username = "${currentUser.username}"
+        var message = "${currentUser.message}"
+        var email = "${currentUser.emailAddress}"
+        codeAddress("${currentUser.address}, ${currentUser.zipCode}", username, message, email)
+        </c:forEach>
 
     }
 
-    function codeAddress(address) {
-        //var address = document.getElementById('address').value;
+    function codeAddress(address, username, message, email) {
         geocoder.geocode( { 'address': address}, function(results, status) {
             if (status == 'OK') {
                 map.setCenter(results[0].geometry.location);
@@ -66,9 +67,9 @@
                     var infowindow = new google.maps.InfoWindow({
                         content: "<div class=\"card\" style=\"width: 18rem;\">\n" +
                             "  <div class=\"card-body\">\n" +
-                            "    <h5 class=\"card-title\">${currentUser.username}</h5>\n" +
-                            "    <h6 class=\"card-subtitle mb-2 text-muted\">${currentUser.emailAddress}</h6>\n" +
-                            "    <p class=\"card-text\">${currentUser.message}</p>\n" +
+                            "    <h5 class=\"card-title\">" + username + "</h5>\n" +
+                            "    <h6 class=\"card-subtitle mb-2 text-muted\">" + email + "</h6>\n" +
+                            "    <p class=\"card-text\">" + message + "</p>\n" +
                             "    <a href=\"#\" class=\"card-link\">Send a Post</a>\n" +
                             "  </div>\n" +
                             "</div>",
@@ -79,7 +80,6 @@
                 alert('Geocode was not successful for the following reason: ' + status);
             }
         });
-        </c:forEach>
     }
 
 </script>

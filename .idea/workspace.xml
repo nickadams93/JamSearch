@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e7e375b-3ecf-40f4-b49a-d5c4b3e64cf8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/messageCreation.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jamsearch/auth/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jamsearch/auth/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jamsearch/auth/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jamsearch/auth/service/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jamsearch/auth/web/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jamsearch/auth/web/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/messageCreation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/messageCreation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/searchpage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/searchpage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/welcome.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/jamsearch/auth/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jamsearch/auth/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jamsearch/auth/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jamsearch/auth/service/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/jamsearch/auth/web/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jamsearch/auth/web/UserController.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,6 +41,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="5381c75a24de137f39b2a6bf857ca3b12e6e8862" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -146,8 +153,57 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jamsearch/auth/web/UserController.java</url>
-          <line>81</line>
+          <line>90</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jamsearch/auth/web/UserController.java</url>
+          <line>108</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jamsearch/auth/web/UserController.java</url>
+          <line>109</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jamsearch/auth/web/UserController.java</url>
+          <line>110</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jamsearch/auth/web/UserController.java</url>
+          <line>112</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jamsearch/auth/web/UserController.java</url>
+          <line>111</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jamsearch/auth/web/UserController.java</url>
+          <line>115</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jamsearch/auth/web/UserController.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jamsearch/auth/web/UserController.java</url>
+          <line>107</line>
+          <properties class="com.jamsearch.auth.web.UserController" method="messageCreation">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jamsearch/auth/service/UserDetailsServiceImpl.java</url>
+          <line>24</line>
+          <properties class="com.jamsearch.auth.service.UserDetailsServiceImpl" method="loadUserByUsername" />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
