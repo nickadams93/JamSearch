@@ -59,7 +59,17 @@ public class Post {
     
 	@ManyToOne
 	private User owner;
-	
+
+	private String sender;
+
+	public String getSender() {
+		return sender;
+	}
+
+	public void setSender(String sender) {
+		this.sender = sender;
+	}
+
 	private String title;
 	
 	private String content;

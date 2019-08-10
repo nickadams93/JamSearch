@@ -44,7 +44,7 @@
     </c:if>
     <ul class="list-group">
         <c:forEach items="${user.posts}" var="post">
-            <li class="list-group-item">${post.content}</li>
+            <li class="list-group-item"><h2>From: ${post.sender}</h2><p>${post.content}</p><a href="/post/${post.sender}">Reply</a></li>
         </c:forEach>
     </ul>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

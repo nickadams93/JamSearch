@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e7e375b-3ecf-40f4-b49a-d5c4b3e64cf8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/post.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jamsearch/auth/model/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jamsearch/auth/model/Post.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jamsearch/auth/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jamsearch/auth/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jamsearch/auth/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jamsearch/auth/service/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jamsearch/auth/web/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jamsearch/auth/web/UserController.java" afterDir="false" />
@@ -66,6 +68,11 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\NicholasAdams\Desktop\JamSearch\JamSearch\src\main\webapp" />
+    </key>
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn spring-boot:run" />
@@ -125,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564961503784</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Bug fix">
+      <created>1565221427577</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1565221427577</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,58 +160,26 @@
     <MESSAGE value="Navbar&#10;&#10;Added geocode api call on search page, and added controller endpoint for search as well as added the user list to the model." />
     <MESSAGE value="Map Load User&#10;Map can loads all the users with a dummy add of &quot;I love guitars&quot;" />
     <MESSAGE value="User marker contact card." />
-    <option name="LAST_COMMIT_MESSAGE" value="User marker contact card." />
+    <MESSAGE value="Bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jamsearch/auth/web/UserController.java</url>
-          <line>90</line>
-          <option name="timeStamp" value="3" />
+          <line>126</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jamsearch/auth/web/UserController.java</url>
-          <line>108</line>
-          <option name="timeStamp" value="5" />
+          <line>127</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jamsearch/auth/web/UserController.java</url>
-          <line>109</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/jamsearch/auth/web/UserController.java</url>
-          <line>110</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/jamsearch/auth/web/UserController.java</url>
-          <line>112</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/jamsearch/auth/web/UserController.java</url>
-          <line>111</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/jamsearch/auth/web/UserController.java</url>
-          <line>115</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/jamsearch/auth/web/UserController.java</url>
-          <line>113</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/jamsearch/auth/web/UserController.java</url>
-          <line>107</line>
-          <properties class="com.jamsearch.auth.web.UserController" method="messageCreation">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="4" />
+          <line>128</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/jamsearch/auth/service/UserDetailsServiceImpl.java</url>

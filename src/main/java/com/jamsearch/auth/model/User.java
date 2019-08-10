@@ -148,6 +148,15 @@ public class User {
 
     private String lastName;
 
+    private boolean encrypted;
+
+    public boolean isEncrypted() {
+        return encrypted;
+    }
+
+    public void setEncrypted(boolean encrypted) {
+        this.encrypted = encrypted;
+    }
 
     public String getFirstName() {
         return firstName;

@@ -70,7 +70,7 @@
                             "    <h5 class=\"card-title\">" + username + "</h5>\n" +
                             "    <h6 class=\"card-subtitle mb-2 text-muted\">" + email + "</h6>\n" +
                             "    <p class=\"card-text\">" + message + "</p>\n" +
-                            "    <a href=\"#\" class=\"card-link\">Send a Post</a>\n" +
+                            "    <a href=\post\\" + username + " class=\"card-link\">Send a Post</a>\n" +
                             "  </div>\n" +
                             "</div>",
                     });

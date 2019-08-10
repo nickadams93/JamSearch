@@ -1,5 +1,6 @@
 package com.jamsearch.auth.web;
 
+import com.jamsearch.auth.model.Post;
 import com.jamsearch.auth.model.User;
 import com.jamsearch.auth.repository.PostRepository;
 import com.jamsearch.auth.repository.UserRepository;
@@ -15,6 +16,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -107,13 +109,41 @@ public class UserController {
     @PutMapping("/messageCreation")
     public String messageCreation(@ModelAttribute("userForm") User userForm, Model model, Principal principal) {
         User user = userService.findByUsername(principal.getName());
-        model.addAttribute("testBefore", userForm);
-        model.addAttribute("testBeforeSave", user);
         user.setMessage(userForm.getMessage());
         userService.save(user);
-        model.addAttribute("testAfterSave", user);
-
         return "redirect:/welcome";
+    }
+
+    @GetMapping("/post/{recipient}")
+    public String getPost(Model model, @PathVariable String recipient) {
+        User userForm = new User();
+        model.addAttribute("userForm", userForm);
+
+        return "/post";
+    }
+
+    @PutMapping("/post/{recipient}")
+    public String putPost(@ModelAttribute("userForm") User userForm, @PathVariable String recipient, Model model, Principal principal) {
+        Post post = new Post();
+        User user = userService.findByUsername(recipient);
+        post.setOwner(user);
+        post.setContent(userForm.getMessage());
+        post.setSender(principal.getName());
+
+        postRepository.save(post);
+
+        if (user.getPosts() == null) {
+            List<Post> posts = new ArrayList<>();
+            posts.add(post);
+            user.setPosts(posts);
+        }
+        else {
+            user.getPosts().add(post);
+        }
+
+        userService.save(user);
+
+        return "redirect:/searchpage";
     }
 
 }
